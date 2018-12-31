@@ -84,7 +84,8 @@ print(x_test.shape  )
 
 # load
 #
-weight_init_std="relu"
+#weight_init_std="relu"
+weight_init_std="sigmoid"
 network = MultiLayerNetExtend(input_size=5
                                 , hidden_size_list=[10, 10, 10, 10, 10 ] , output_size=2, 
                                 weight_init_std=weight_init_std, use_batchnorm=True)
@@ -112,6 +113,6 @@ df = pd.DataFrame(pred_y , PassengerId, columns=["Survived"])
 df.head()
 
 #
-df.to_csv("out3b.csv", index_label=["PassengerId"])
+df.to_csv("out3c.csv", index_label=["PassengerId"])
 
 
